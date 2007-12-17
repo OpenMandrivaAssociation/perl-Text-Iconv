@@ -13,7 +13,6 @@ License:	GPL
 Group:		Development/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{module}-%{version}.tar.bz2
 BuildRequires:	perl-devel >= 5.6.1
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Url:		http://search.cpan.org/dist/%{module}
 
 %description
