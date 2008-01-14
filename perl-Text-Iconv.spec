@@ -3,7 +3,7 @@
 %define	pnam	Iconv
 %define name	perl-%pdir-%pnam
 %define version 1.7
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary:	Text::Iconv perl module
 Name:		%{name}
