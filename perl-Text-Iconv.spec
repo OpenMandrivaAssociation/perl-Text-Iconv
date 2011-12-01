@@ -30,13 +30,13 @@ which will also be installed as Text::Iconv(3) man page.
 %make
 
 %install
-%{__rm} -rf $RPM_BUILD_ROOT
+%{__rm} -rf %{buildroot}
 %{makeinstall_std} INSTALLDIRS=vendor
 
-%{__rm} -f $RPM_BUILD_ROOT%{perl_archlib}/perllocal.pod
+%{__rm} -f %{buildroot}%{perl_archlib}/perllocal.pod
 
 %clean
-%{__rm} -rf $RPM_BUILD_ROOT
+%{__rm} -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
