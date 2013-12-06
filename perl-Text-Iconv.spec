@@ -3,7 +3,7 @@
 Summary:	Text::Iconv perl module
 Name:		perl-%{modname}
 Version:	1.7
-Release:	12
+Release:	13
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
