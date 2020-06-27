@@ -3,7 +3,7 @@
 Summary:	Text::Iconv perl module
 Name:		perl-%{modname}
 Version:	1.7
-Release:	24
+Release:	25
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -21,10 +21,10 @@ which will also be installed as Text::Iconv(3) man page.
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %install
-%makeinstall_std INSTALLDIRS=vendor
+%make_install INSTALLDIRS=vendor
 
 rm -f %{buildroot}%{perl_archlib}/perllocal.pod
 
