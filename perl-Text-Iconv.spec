@@ -1,14 +1,14 @@
-%define _empty_manifest_terminate_build 0
+%undefine _debugsource_packages
 %define	modname	Text-Iconv
 
 Summary:	Text::Iconv perl module
 Name:		perl-%{modname}
 Version:	1.7
-Release:	28
+Release:	29
 License:	GPLv2
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Text/%{modname}-%{version}.tar.bz2
+Url:		https://metacpan.org/dist/%{modname}
+Source0:	https://cpan.metacpan.org/pub/CPAN/modules/by-module/Text/%{modname}-%{version}.tar.bz2
 BuildRequires:	perl-devel >= 5.6.1
 
 %description
@@ -18,10 +18,10 @@ more details see the POD documentation embedded in the file Iconv.pm,
 which will also be installed as Text::Iconv(3) man page.
 
 %prep
-%setup -qn %{modname}-%{version}
+%autosetup -p1 -n %{modname}-%{version}
+perl Makefile.PL INSTALLDIRS=vendor
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
 %make_build
 
 %install
@@ -38,4 +38,3 @@ rm -f %{buildroot}%{perl_archlib}/perllocal.pod
 %{perl_vendorarch}/auto/Text/Iconv/autosplit.ix
 %{perl_vendorarch}/auto/Text/Iconv/*.so
 %{_mandir}/man3/*
-
