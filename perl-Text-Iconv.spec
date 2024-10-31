@@ -1,4 +1,3 @@
-%undefine _debugsource_packages
 %define	modname	Text-Iconv
 
 Summary:	Text::Iconv perl module
