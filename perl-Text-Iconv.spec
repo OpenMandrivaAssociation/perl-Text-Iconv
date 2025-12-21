@@ -8,6 +8,7 @@ License:	GPLv2
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/%{modname}
 Source0:	https://cpan.metacpan.org/pub/CPAN/modules/by-module/Text/%{modname}-%{version}.tar.bz2
+BuildRequires:	make
 BuildRequires:	perl-devel >= 5.6.1
 
 %description
